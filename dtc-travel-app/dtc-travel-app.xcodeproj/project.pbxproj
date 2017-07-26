@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B422B001F2839D400FED9CB /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B422AFF1F2839D400FED9CB /* CameraViewController.swift */; };
 		8BA38EF81F282FB9004186BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA38EF71F282FB9004186BA /* AppDelegate.swift */; };
 		8BA38EFA1F282FB9004186BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA38EF91F282FB9004186BA /* ViewController.swift */; };
 		8BA38EFD1F282FB9004186BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BA38EFB1F282FB9004186BA /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8B422AFF1F2839D400FED9CB /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		8BA38EF41F282FB9004186BA /* dtc-travel-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "dtc-travel-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BA38EF71F282FB9004186BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8BA38EF91F282FB9004186BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				8BA38EFE1F282FB9004186BA /* Assets.xcassets */,
 				8BA38F001F282FB9004186BA /* LaunchScreen.storyboard */,
 				8BA38F031F282FB9004186BA /* Info.plist */,
+				8B422AFF1F2839D400FED9CB /* CameraViewController.swift */,
 			);
 			path = "dtc-travel-app";
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 			files = (
 				8BA38EFA1F282FB9004186BA /* ViewController.swift in Sources */,
 				8BA38EF81F282FB9004186BA /* AppDelegate.swift in Sources */,
+				8B422B001F2839D400FED9CB /* CameraViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,6 +507,7 @@
 				8BA38F1E1F282FBA004186BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8BA38F1F1F282FBA004186BA /* Build configuration list for PBXNativeTarget "dtc-travel-appTests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +516,7 @@
 				8BA38F211F282FBA004186BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8BA38F221F282FBA004186BA /* Build configuration list for PBXNativeTarget "dtc-travel-appUITests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +525,7 @@
 				8BA38F241F282FBA004186BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
