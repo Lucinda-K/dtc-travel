@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -36,7 +37,51 @@
                     <view key="view" contentMode="scaleToFill" id="ZWT-XK-Kxd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v76-B8-07c">
+                                <rect key="frame" x="0.0" y="72" width="375" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="JiY-WF-RhK"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WdK-Aq-fPs">
+                                <rect key="frame" x="0.0" y="110" width="375" height="487"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b7z-c7-CZA">
+                                <rect key="frame" x="0.0" y="605" width="375" height="62"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bIt-QU-TbJ">
+                                        <rect key="frame" x="161.5" y="5.5" width="51" height="51"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="bIt-QU-TbJ" secondAttribute="height" multiplier="1:1" id="YRz-BB-XQE"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                        <state key="normal" title="+"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="bIt-QU-TbJ" firstAttribute="centerX" secondItem="b7z-c7-CZA" secondAttribute="centerX" id="JIn-sP-naH"/>
+                                    <constraint firstItem="bIt-QU-TbJ" firstAttribute="centerY" secondItem="b7z-c7-CZA" secondAttribute="centerY" id="JWZ-B1-QUH"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="0.08235294118" green="0.40000000000000002" blue="0.65490196079999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="v76-B8-07c" firstAttribute="leading" secondItem="ZWT-XK-Kxd" secondAttribute="leading" id="8yd-ec-3OA"/>
+                            <constraint firstAttribute="trailing" secondItem="b7z-c7-CZA" secondAttribute="trailing" id="Mt6-2V-FUb"/>
+                            <constraint firstItem="WdK-Aq-fPs" firstAttribute="top" secondItem="v76-B8-07c" secondAttribute="bottom" constant="8" id="TBn-68-vI8"/>
+                            <constraint firstItem="AOb-gI-sCh" firstAttribute="top" secondItem="b7z-c7-CZA" secondAttribute="bottom" id="ZgC-92-wjJ"/>
+                            <constraint firstAttribute="trailing" secondItem="WdK-Aq-fPs" secondAttribute="trailing" id="bTj-Bn-0PD"/>
+                            <constraint firstItem="WdK-Aq-fPs" firstAttribute="leading" secondItem="ZWT-XK-Kxd" secondAttribute="leading" id="bjz-uv-KSL"/>
+                            <constraint firstItem="b7z-c7-CZA" firstAttribute="leading" secondItem="ZWT-XK-Kxd" secondAttribute="leading" id="h8J-Wj-SCU"/>
+                            <constraint firstItem="AOb-gI-sCh" firstAttribute="top" secondItem="WdK-Aq-fPs" secondAttribute="bottom" constant="70" id="nSq-az-mLj"/>
+                            <constraint firstItem="v76-B8-07c" firstAttribute="top" secondItem="YXc-I7-lph" secondAttribute="bottom" constant="8" id="q8J-rC-I63"/>
+                            <constraint firstItem="b7z-c7-CZA" firstAttribute="top" secondItem="WdK-Aq-fPs" secondAttribute="bottom" constant="8" id="rfl-8y-gt7"/>
+                            <constraint firstAttribute="trailing" secondItem="v76-B8-07c" secondAttribute="trailing" id="ymY-OP-1tw"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Klyde Warren Trip" id="6Ve-n4-A7k">
                         <barButtonItem key="rightBarButtonItem" title="Camera" id="g3O-Ri-nGc">
@@ -48,7 +93,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k3K-pL-MWw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3054" y="213"/>
+            <point key="canvasLocation" x="-3055.1999999999998" y="212.74362818590706"/>
         </scene>
         <!--CameraViewController-->
         <scene sceneID="tne-QT-ifu">
