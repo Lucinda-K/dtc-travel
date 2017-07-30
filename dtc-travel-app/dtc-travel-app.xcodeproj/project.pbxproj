@@ -76,6 +76,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6AA475551F2E9BFB00F3B5CF /* Use Cases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Use Cases";
+			sourceTree = "<group>";
+		};
 		8BA38EEB1F282FB8004186BA = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +106,7 @@
 		8BA38EF61F282FB9004186BA /* dtc-travel-app */ = {
 			isa = PBXGroup;
 			children = (
+				6AA475551F2E9BFB00F3B5CF /* Use Cases */,
 				8BA38EF71F282FB9004186BA /* AppDelegate.swift */,
 				8BA38EF91F282FB9004186BA /* ViewController.swift */,
 				8BA38EFB1F282FB9004186BA /* Main.storyboard */,
