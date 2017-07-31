@@ -14,10 +14,7 @@ class CategoryTableViewCell: UITableViewCell, UICollectionViewDataSource, UIColl
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // self.collectionView.dataSource = self
-        // self.collectionView.delegate = self
         self.collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
-        // Initialization code
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

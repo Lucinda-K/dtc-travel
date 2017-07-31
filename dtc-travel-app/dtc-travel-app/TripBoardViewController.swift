@@ -8,10 +8,18 @@
 
 import UIKit
 
-class TripBoardViewController: UIViewController {
+class TripBoardViewController: UIViewController, UIPopoverPresentationControllerDelegate {
     
+    // IBOutlets
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var addEntryButton: UIButton!
     
+    // IBActions
+    @IBAction func addTapped(_ sender: Any) {
+        self.presentEntryOptionsPopover()
+    }
+    
+    // Class attributes
     final fileprivate let reuseId = "categoryCell"
     
     override func viewDidLoad() {
@@ -35,7 +43,32 @@ class TripBoardViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    // Popover Functionality
+    private func presentEntryOptionsPopover () {
+        // Build popover view controller and present it as popover
+        guard let entryOptionsPopover = self.storyboard?.instantiateViewController(withIdentifier: "entryOptionsPopover") as? UITableViewController else {
+            preconditionFailure("EntryOptionsPopover cannot be instantiated from storyboard")
+        }
+        
+        let navigationController = UINavigationController(rootViewController: entryOptionsPopover)
+        navigationController.modalPresentationStyle = UIModalPresentationStyle.popover
+        navigationController.isNavigationBarHidden = true
+        entryOptionsPopover.preferredContentSize = CGSize(width: 300, height: 150)
+        
+        guard let popover = navigationController.popoverPresentationController else {
+            preconditionFailure("Unable to access popoverPresentationControlller for presentation of EntryOptionsPopover")
+        }
+        popover.delegate = self
+        popover.sourceView = self.addEntryButton
+        popover.sourceRect = self.addEntryButton.bounds
+        self.present(navigationController, animated: true, completion: nil)
 
+    }
+    
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        return UIModalPresentationStyle.none
+    }
 }
 
 extension TripBoardViewController: UITableViewDataSource, UITableViewDelegate{
@@ -64,8 +97,6 @@ extension TripBoardViewController: UITableViewDataSource, UITableViewDelegate{
         guard let cell = tableView.dequeueReusableCell(withIdentifier: reuseId, for: indexPath) as? CategoryTableViewCell else {
             preconditionFailure("Cell cannot be dequeued as a CategoryTableViewCell")
         }
-        
-        // cell.textLabel?.text = "hello world!"
         return cell
     } 
 }

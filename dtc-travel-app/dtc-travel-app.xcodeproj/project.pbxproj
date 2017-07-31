@@ -82,6 +82,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A193E011F2EAD45001BA9B6 /* Use Cases */ = {
+			isa = PBXGroup;
+			children = (
+				6A193E021F2EAD50001BA9B6 /* Trip Board */,
+			);
+			name = "Use Cases";
+			sourceTree = "<group>";
+		};
+		6A193E021F2EAD50001BA9B6 /* Trip Board */ = {
+			isa = PBXGroup;
+			children = (
+				6AA475591F2E9EE700F3B5CF /* TripBoardViewController.swift */,
+				6AA4755B1F2EA07700F3B5CF /* CategoryCell.xib */,
+				6AA4755D1F2EA36300F3B5CF /* CategoryTableViewCell.swift */,
+			);
+			name = "Trip Board";
+			sourceTree = "<group>";
+		};
 		8BA38EEB1F282FB8004186BA = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +123,7 @@
 		8BA38EF61F282FB9004186BA /* dtc-travel-app */ = {
 			isa = PBXGroup;
 			children = (
+				6A193E011F2EAD45001BA9B6 /* Use Cases */,
 				8BA38EF71F282FB9004186BA /* AppDelegate.swift */,
 				8BA38EF91F282FB9004186BA /* ViewController.swift */,
 				8BA38EFB1F282FB9004186BA /* Main.storyboard */,
@@ -112,9 +131,6 @@
 				8BA38F001F282FB9004186BA /* LaunchScreen.storyboard */,
 				8BA38F031F282FB9004186BA /* Info.plist */,
 				8B422AFF1F2839D400FED9CB /* CameraViewController.swift */,
-				6AA475591F2E9EE700F3B5CF /* TripBoardViewController.swift */,
-				6AA4755B1F2EA07700F3B5CF /* CategoryCell.xib */,
-				6AA4755D1F2EA36300F3B5CF /* CategoryTableViewCell.swift */,
 			);
 			path = "dtc-travel-app";
 			sourceTree = "<group>";
