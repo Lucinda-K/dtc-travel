@@ -100,9 +100,7 @@
                             <constraint firstAttribute="trailing" secondItem="v76-B8-07c" secondAttribute="trailing" id="ymY-OP-1tw"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Klyde Warren Trip" id="6Ve-n4-A7k">
-                        <barButtonItem key="rightBarButtonItem" title="Camera" id="g3O-Ri-nGc"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Klyde Warren Trip" id="6Ve-n4-A7k"/>
                     <connections>
                         <outlet property="addEntryButton" destination="bIt-QU-TbJ" id="nty-GT-XXb"/>
                         <outlet property="tableView" destination="WdK-Aq-fPs" id="hNs-Pl-2Wh"/>
