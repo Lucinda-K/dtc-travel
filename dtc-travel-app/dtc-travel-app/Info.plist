@@ -36,5 +36,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>The Travel App would like access to your camera so you can document your travel experience through photos!</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>The Travel App would like to access your camera role</string>
 </dict>
 </plist>

@@ -247,6 +247,7 @@
 				TargetAttributes = {
 					8BA38EF31F282FB8004186BA = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = L7SLXWS9A4;
 						ProvisioningStyle = Automatic;
 					};
 					8BA38F071F282FBA004186BA = {
@@ -474,7 +475,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = L7SLXWS9A4;
 				INFOPLIST_FILE = "dtc-travel-app/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "pariveda.dtc-travel-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -486,7 +489,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = L7SLXWS9A4;
 				INFOPLIST_FILE = "dtc-travel-app/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "pariveda.dtc-travel-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
