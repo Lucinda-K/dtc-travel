@@ -73,11 +73,7 @@ class TripBoardViewController: UIViewController, UIPopoverPresentationController
     
     func presentCamera () {
         self.entryPopover?.dismiss(animated: false, completion: {
-            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             self.showCamera()
-//            if let cameraViewController = storyBoard.instantiateViewController(withIdentifier: "cameraView") as? CameraViewController {
-//                self.present(cameraViewController, animated: true, completion: nil)
-//            }
         })
     }
 }
