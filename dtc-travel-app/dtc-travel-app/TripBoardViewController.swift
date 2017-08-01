@@ -85,6 +85,19 @@ extension TripBoardViewController: UITableViewDataSource, UITableViewDelegate{
         return 3
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch indexPath.section {
+        case 0:
+            return 240
+        case 1:
+            return 240
+        case 2:
+            return 240
+        default:
+            return 100
+        }
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
