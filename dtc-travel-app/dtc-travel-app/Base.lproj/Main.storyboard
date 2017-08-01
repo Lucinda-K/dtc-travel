@@ -101,11 +101,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Klyde Warren Trip" id="6Ve-n4-A7k">
-                        <barButtonItem key="rightBarButtonItem" title="Camera" id="g3O-Ri-nGc">
-                            <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" id="4hb-ZF-Mgy"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Camera" id="g3O-Ri-nGc"/>
                     </navigationItem>
                     <connections>
                         <outlet property="addEntryButton" destination="bIt-QU-TbJ" id="nty-GT-XXb"/>
@@ -116,10 +112,10 @@
             </objects>
             <point key="canvasLocation" x="-3055.1999999999998" y="212.74362818590706"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Entry Options Popover View Controller-->
         <scene sceneID="aXp-bJ-vM7">
             <objects>
-                <tableViewController storyboardIdentifier="entryOptionsPopover" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gsC-Gi-taM" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="entryOptionsPopover" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gsC-Gi-taM" customClass="EntryOptionsPopoverViewController" customModule="dtc_travel_app" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Rh9-lt-jVX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -143,6 +139,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="presentCamera" id="0fo-Fg-E87"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="8FU-5x-3ee" style="IBUITableViewCellStyleDefault" id="F4B-tn-5qX">
                                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
@@ -194,7 +193,7 @@
         <!--CameraViewController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="CameraViewController" customClass="CameraViewController" customModule="dtc_travel_app" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="cameraView" id="BYZ-38-t0r" userLabel="CameraViewController" customClass="CameraViewController" customModule="dtc_travel_app" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -204,7 +203,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MdZ-pB-nBK" userLabel="Preview View">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>

@@ -34,19 +34,17 @@ class TripBoardViewController: UIViewController, UIPopoverPresentationController
     }
     
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "presentCameraEntry" {
+            self.navigationController?.popViewController(animated: true)
+        }
     }
-    */
     
     // Popover Functionality
     private func presentEntryOptionsPopover () {
-        // Build popover view controller and present it as popover
         guard let entryOptionsPopover = self.storyboard?.instantiateViewController(withIdentifier: "entryOptionsPopover") as? UITableViewController else {
             preconditionFailure("EntryOptionsPopover cannot be instantiated from storyboard")
         }
@@ -63,7 +61,6 @@ class TripBoardViewController: UIViewController, UIPopoverPresentationController
         popover.sourceView = self.addEntryButton
         popover.sourceRect = self.addEntryButton.bounds
         self.present(navigationController, animated: true, completion: nil)
-
     }
     
     func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
