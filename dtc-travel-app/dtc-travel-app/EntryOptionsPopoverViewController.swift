@@ -10,6 +10,8 @@ import UIKit
 
 class EntryOptionsPopoverViewController: UITableViewController {
 
+    var delegate:TripBoardViewController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -86,17 +88,12 @@ class EntryOptionsPopoverViewController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "presentCamera" {
-            self.navigationController?.modalPresentationStyle = .fullScreen
-        }
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        /* if indexPath.row == 1 {
-            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let newViewController = storyBoard.instantiateViewController(withIdentifier: "newViewController") as! NewViewController
-            self.present(newViewController, animated: true, completion: nil)
-        } */
+        if indexPath.row == 0 {
+            self.delegate?.presentCamera()
+        }
     }
 
 }

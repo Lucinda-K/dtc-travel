@@ -21,6 +21,7 @@ class TripBoardViewController: UIViewController, UIPopoverPresentationController
     
     // Class attributes
     final fileprivate let reuseId = "categoryCell"
+    private var entryPopover:EntryOptionsPopoverViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,10 +46,12 @@ class TripBoardViewController: UIViewController, UIPopoverPresentationController
     
     // Popover Functionality
     private func presentEntryOptionsPopover () {
-        guard let entryOptionsPopover = self.storyboard?.instantiateViewController(withIdentifier: "entryOptionsPopover") as? UITableViewController else {
+        guard let entryOptionsPopover = self.storyboard?.instantiateViewController(withIdentifier: "entryOptionsPopover") as? EntryOptionsPopoverViewController else {
             preconditionFailure("EntryOptionsPopover cannot be instantiated from storyboard")
         }
         
+        self.entryPopover = entryOptionsPopover
+        entryOptionsPopover.delegate = self
         let navigationController = UINavigationController(rootViewController: entryOptionsPopover)
         navigationController.modalPresentationStyle = UIModalPresentationStyle.popover
         navigationController.isNavigationBarHidden = true
@@ -65,6 +68,15 @@ class TripBoardViewController: UIViewController, UIPopoverPresentationController
     
     func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
         return UIModalPresentationStyle.none
+    }
+    
+    func presentCamera () {
+        self.entryPopover?.dismiss(animated: false, completion: {
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            if let cameraViewController = storyBoard.instantiateViewController(withIdentifier: "cameraView") as? CameraViewController {
+                self.present(cameraViewController, animated: true, completion: nil)
+            }
+        })
     }
 }
 
