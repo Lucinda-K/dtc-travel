@@ -11,39 +11,22 @@ import AVFoundation
 
 class CameraViewController: UIViewController {
 
-    
-    
+
     @IBOutlet weak var previewView: UIView!
     
-
-    var captureSession: AVCaptureSession?
-    var videoPreviewLayer: AVCaptureVideoPreviewLayer?
+    @IBOutlet weak var takeAPictureButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        
-        let captureDevice = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
-        
-        do {
-            let input = try AVCaptureDeviceInput(device: captureDevice)
-            
-            
-            captureSession = AVCaptureSession()
-            captureSession?.addInput(input)
-            
-            videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-            videoPreviewLayer?.videoGravity = AVLayerVideoGravityResizeAspectFill
-            videoPreviewLayer?.frame = view.layer.bounds
-            previewView.layer.addSublayer(videoPreviewLayer!)
-            
-            
-            captureSession?.startRunning()
-        } catch {
-            print(error)
-        }
+        addTapGestures()
     }
+    
+    func addTapGestures() {
+        let tapToTakePhoto = UITapGestureRecognizer(target: self, action: #selector(tappedImage))
+        takeAPictureButton.addGestureRecognizer(tapToTakePhoto)
+    }
+
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -61,3 +44,36 @@ class CameraViewController: UIViewController {
     */
 
 }
+
+extension CameraViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func tappedImage(_ sender: UITapGestureRecognizer) {
+        // Make sure device has a camera
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+                        // Setup and present default Camera View Controller
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = .camera
+            imagePicker.allowsEditing = false
+            self.present(imagePicker, animated: true, completion: nil)
+        }
+    }
+    
+    
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        // Dismiss the view controller a
+        picker.dismiss(animated: true, completion: nil)
+        
+        
+    }
+    
+    
+}
+
+
+
+
+
+
