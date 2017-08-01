@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qG2-Pe-qbk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qG2-Pe-qbk">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -184,40 +184,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sk5-El-CAq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3055" y="950"/>
-        </scene>
-        <!--CameraViewController-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController storyboardIdentifier="cameraView" id="BYZ-38-t0r" userLabel="CameraViewController" customClass="CameraViewController" customModule="dtc_travel_app" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MdZ-pB-nBK" userLabel="Preview View">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="MdZ-pB-nBK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="IGa-fb-kLk"/>
-                            <constraint firstAttribute="trailing" secondItem="MdZ-pB-nBK" secondAttribute="trailing" id="Vne-uf-XWU"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="MdZ-pB-nBK" secondAttribute="bottom" id="W7z-jy-3ZC"/>
-                            <constraint firstItem="MdZ-pB-nBK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="w4P-jU-4Pr"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="PreviewView" destination="MdZ-pB-nBK" id="17C-pJ-Mvy"/>
-                        <outlet property="previewView" destination="MdZ-pB-nBK" id="Yxs-ii-cbd"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2247" y="213"/>
         </scene>
     </scenes>
 </document>

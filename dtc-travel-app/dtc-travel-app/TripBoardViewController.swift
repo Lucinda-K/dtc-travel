@@ -29,6 +29,7 @@ class TripBoardViewController: UIViewController, UIPopoverPresentationController
         // Do any additional setup after loading the view.
     }
 
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -73,9 +74,10 @@ class TripBoardViewController: UIViewController, UIPopoverPresentationController
     func presentCamera () {
         self.entryPopover?.dismiss(animated: false, completion: {
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            if let cameraViewController = storyBoard.instantiateViewController(withIdentifier: "cameraView") as? CameraViewController {
-                self.present(cameraViewController, animated: true, completion: nil)
-            }
+            self.showCamera()
+//            if let cameraViewController = storyBoard.instantiateViewController(withIdentifier: "cameraView") as? CameraViewController {
+//                self.present(cameraViewController, animated: true, completion: nil)
+//            }
         })
     }
 }
@@ -121,4 +123,31 @@ extension TripBoardViewController: UITableViewDataSource, UITableViewDelegate{
         }
         return cell
     } 
+}
+
+
+extension TripBoardViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func showCamera() {
+        // Make sure device has a camera
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            // Setup and present default Camera View Controller
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = .camera
+            imagePicker.allowsEditing = false
+            self.present(imagePicker, animated: true, completion: nil)
+        }
+    }
+        
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        // Dismiss the view controller a
+        picker.dismiss(animated: true, completion: nil)
+        
+        
+    }
+    
+    
 }
