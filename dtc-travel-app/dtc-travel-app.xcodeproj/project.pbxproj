@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A0973A21F357CB3005141CF /* writing3.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A09739D1F357CB3005141CF /* writing3.png */; };
+		6A0973A31F357CB3005141CF /* writing2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A09739E1F357CB3005141CF /* writing2.png */; };
+		6A0973A41F357CB3005141CF /* writing1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A09739F1F357CB3005141CF /* writing1.png */; };
+		6A0973AA1F357D53005141CF /* people1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6A0973A81F357D53005141CF /* people1.jpg */; };
+		6A0973AC1F357E6D005141CF /* people2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A0973AB1F357E6D005141CF /* people2.png */; };
+		6A0973AE1F357F32005141CF /* food3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6A0973AD1F357F32005141CF /* food3.jpeg */; };
 		6A193E041F2EB87E001BA9B6 /* EntryOptionsPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A193E031F2EB87E001BA9B6 /* EntryOptionsPopoverViewController.swift */; };
 		6A193E0C1F300125001BA9B6 /* speaker.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A193E091F300125001BA9B6 /* speaker.png */; };
 		6A193E0D1F300125001BA9B6 /* food1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6A193E0A1F300125001BA9B6 /* food1.jpg */; };
@@ -43,6 +49,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6A09739D1F357CB3005141CF /* writing3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = writing3.png; sourceTree = "<group>"; };
+		6A09739E1F357CB3005141CF /* writing2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = writing2.png; sourceTree = "<group>"; };
+		6A09739F1F357CB3005141CF /* writing1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = writing1.png; sourceTree = "<group>"; };
+		6A0973A81F357D53005141CF /* people1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = people1.jpg; sourceTree = "<group>"; };
+		6A0973AB1F357E6D005141CF /* people2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = people2.png; sourceTree = "<group>"; };
+		6A0973AD1F357F32005141CF /* food3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = food3.jpeg; sourceTree = "<group>"; };
 		6A193E031F2EB87E001BA9B6 /* EntryOptionsPopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryOptionsPopoverViewController.swift; sourceTree = "<group>"; };
 		6A193E091F300125001BA9B6 /* speaker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = speaker.png; sourceTree = "<group>"; };
 		6A193E0A1F300125001BA9B6 /* food1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = food1.jpg; sourceTree = "<group>"; };
@@ -116,7 +128,13 @@
 		6A193E071F300108001BA9B6 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				6A0973AB1F357E6D005141CF /* people2.png */,
+				6A0973A81F357D53005141CF /* people1.jpg */,
+				6A09739D1F357CB3005141CF /* writing3.png */,
+				6A09739E1F357CB3005141CF /* writing2.png */,
+				6A09739F1F357CB3005141CF /* writing1.png */,
 				6A193E091F300125001BA9B6 /* speaker.png */,
+				6A0973AD1F357F32005141CF /* food3.jpeg */,
 				6A193E0A1F300125001BA9B6 /* food1.jpg */,
 				6A193E0B1F300125001BA9B6 /* food2.jpg */,
 			);
@@ -287,11 +305,17 @@
 				6A193E101F300195001BA9B6 /* EntryCell.xib in Resources */,
 				8BA38F021F282FB9004186BA /* LaunchScreen.storyboard in Resources */,
 				8BA38EFF1F282FB9004186BA /* Assets.xcassets in Resources */,
+				6A0973A21F357CB3005141CF /* writing3.png in Resources */,
+				6A0973AC1F357E6D005141CF /* people2.png in Resources */,
 				8BA38EFD1F282FB9004186BA /* Main.storyboard in Resources */,
 				6A193E0D1F300125001BA9B6 /* food1.jpg in Resources */,
+				6A0973AA1F357D53005141CF /* people1.jpg in Resources */,
 				6AA4755C1F2EA07700F3B5CF /* CategoryCell.xib in Resources */,
 				6A193E0E1F300125001BA9B6 /* food2.jpg in Resources */,
 				6A193E0C1F300125001BA9B6 /* speaker.png in Resources */,
+				6A0973A31F357CB3005141CF /* writing2.png in Resources */,
+				6A0973A41F357CB3005141CF /* writing1.png in Resources */,
+				6A0973AE1F357F32005141CF /* food3.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,13 +13,12 @@ class CategoryTableViewCell: UITableViewCell, UICollectionViewDataSource, UIColl
     @IBOutlet weak var collectionView: UICollectionView!
     
     private let reuseId:String = "entryCell"
+    private var images:[String] = []
     
     override func awakeFromNib() {
         super.awakeFromNib()
         self.collectionView.register(UINib(nibName: "EntryCell", bundle: nil), forCellWithReuseIdentifier: reuseId)
-        let rect = self.collectionView.bounds
-        let contentHeight = 9 / (rect.width / 100) * 100
-        self.collectionView.bounds = CGRect(x: rect.origin.x, y: rect.origin.y, width: rect.size.width, height: 500)
+        print(self.collectionView.bounds.width)
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -28,6 +27,9 @@ class CategoryTableViewCell: UITableViewCell, UICollectionViewDataSource, UIColl
         // Configure the view for the selected state
     }
     
+    func configure (images:[String]) {
+        self.images = images
+    }
 
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -35,7 +37,7 @@ class CategoryTableViewCell: UITableViewCell, UICollectionViewDataSource, UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 9
+        return self.images.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -43,20 +45,7 @@ class CategoryTableViewCell: UITableViewCell, UICollectionViewDataSource, UIColl
             preconditionFailure("Unable to dequeue cell as an EntryCollectionViewCell")
         }
         
-        if indexPath.section == 0 {
-            let mod = indexPath.row % 3
-            
-            switch mod {
-            case 0:
-                cell.image.image = UIImage(named: "food1.jpg")
-            case 1:
-                cell.image.image = UIImage(named: "food2.jpg")
-            case 2:
-                cell.image.image = UIImage(named: "speaker.png")
-            default:
-                break
-            }
-        }
+        cell.image.image = UIImage(named: self.images[indexPath.row])
         
         cell.backgroundColor = UIColor.gray
         cell.layer.cornerRadius = 10.0

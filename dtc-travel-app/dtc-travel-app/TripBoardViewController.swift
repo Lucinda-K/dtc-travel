@@ -21,6 +21,9 @@ class TripBoardViewController: UIViewController, UIPopoverPresentationController
     
     // Class attributes
     final fileprivate let reuseId = "categoryCell"
+    final fileprivate let foodImages = ["food1.jpg", "food2.jpg", "food3.jpeg"]
+    final fileprivate let peopleImages = ["people1.jpg", "people2.png"]
+    final fileprivate let buildingImages = ["speaker.png"]
     private var entryPopover:EntryOptionsPopoverViewController?
     
     override func viewDidLoad() {
@@ -84,16 +87,23 @@ extension TripBoardViewController: UITableViewDataSource, UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let rect = self.tableView.bounds
+        
+        var numCells = CGFloat(0)
         switch indexPath.section {
         case 0:
-            return 240
+            numCells = CGFloat(self.foodImages.count)
         case 1:
-            return 240
+            numCells = CGFloat(self.peopleImages.count)
         case 2:
-            return 240
+            numCells = CGFloat(self.buildingImages.count)
         default:
-            return 100
+            break
         }
+        
+        let height = (numCells * 100 / rect.width).rounded() * 100
+        print(height)
+        return height
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -116,6 +126,17 @@ extension TripBoardViewController: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: reuseId, for: indexPath) as? CategoryTableViewCell else {
             preconditionFailure("Cell cannot be dequeued as a CategoryTableViewCell")
+        }
+        
+        switch indexPath.section {
+        case 0:
+            cell.configure(images: self.foodImages)
+        case 1:
+            cell.configure(images: self.peopleImages)
+        case 2:
+            cell.configure(images: self.buildingImages)
+        default:
+            break
         }
         return cell
     } 
