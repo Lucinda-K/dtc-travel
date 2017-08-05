@@ -21,9 +21,9 @@ class TripBoardViewController: UIViewController, UIPopoverPresentationController
     
     // Class attributes
     final fileprivate let reuseId = "categoryCell"
-    final fileprivate let foodImages = ["food1.jpg", "food2.jpg", "food3.jpeg"]
-    final fileprivate let peopleImages = ["people1.jpg", "people2.png"]
-    final fileprivate let buildingImages = ["speaker.png"]
+    final fileprivate let foodImages = ["food1.jpg", "speaker.png", "writing3.png", "food2.jpg", "food3.jpeg"]
+    final fileprivate let peopleImages = ["speaker.png", "people1.jpg", "people2.png", "speaker.png", "writing1.png"]
+    final fileprivate let buildingImages = ["writing1.png", "speaker.png", "writing2.png"]
     private var entryPopover:EntryOptionsPopoverViewController?
     
     override func viewDidLoad() {
@@ -101,9 +101,9 @@ extension TripBoardViewController: UITableViewDataSource, UITableViewDelegate{
             break
         }
         
-        let height = (numCells * 100 / rect.width).rounded() * 100
-        print(height)
-        return height
+        let height = (numCells * 100 / rect.width) * 100
+//        print(height)
+        return height >= 100 ? height : 100
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
