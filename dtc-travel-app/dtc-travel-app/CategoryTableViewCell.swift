@@ -46,8 +46,7 @@ class CategoryTableViewCell: UITableViewCell, UICollectionViewDataSource, UIColl
         }
         
         cell.image.image = UIImage(named: self.images[indexPath.row])
-        
-        cell.backgroundColor = UIColor.gray
+        // cell.backgroundColor = UIColor.gray
         cell.layer.cornerRadius = 10.0
         return cell
     }
