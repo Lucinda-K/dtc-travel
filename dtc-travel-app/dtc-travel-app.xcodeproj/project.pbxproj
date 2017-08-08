@@ -29,6 +29,7 @@
 		8BA38F021F282FB9004186BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BA38F001F282FB9004186BA /* LaunchScreen.storyboard */; };
 		8BA38F0D1F282FBA004186BA /* dtc_travel_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA38F0C1F282FBA004186BA /* dtc_travel_appTests.swift */; };
 		8BA38F181F282FBA004186BA /* dtc_travel_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA38F171F282FBA004186BA /* dtc_travel_appUITests.swift */; };
+		8BFE9FB31F393BFC006758FF /* CaptionMediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFE9FB21F393BFC006758FF /* CaptionMediaViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		8BA38F131F282FBA004186BA /* dtc-travel-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "dtc-travel-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BA38F171F282FBA004186BA /* dtc_travel_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dtc_travel_appUITests.swift; sourceTree = "<group>"; };
 		8BA38F191F282FBA004186BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BFE9FB21F393BFC006758FF /* CaptionMediaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaptionMediaViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 				8BA38EF71F282FB9004186BA /* AppDelegate.swift */,
 				8BA38EF91F282FB9004186BA /* ViewController.swift */,
 				8BA38EFB1F282FB9004186BA /* Main.storyboard */,
+				8BFE9FB21F393BFC006758FF /* CaptionMediaViewController.swift */,
 				8BA38EFE1F282FB9004186BA /* Assets.xcassets */,
 				8BA38F001F282FB9004186BA /* LaunchScreen.storyboard */,
 				8BA38F031F282FB9004186BA /* Info.plist */,
@@ -341,6 +344,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A193E041F2EB87E001BA9B6 /* EntryOptionsPopoverViewController.swift in Sources */,
+				8BFE9FB31F393BFC006758FF /* CaptionMediaViewController.swift in Sources */,
 				6AA4755E1F2EA36300F3B5CF /* CategoryTableViewCell.swift in Sources */,
 				8BA38EFA1F282FB9004186BA /* ViewController.swift in Sources */,
 				8BA38EF81F282FB9004186BA /* AppDelegate.swift in Sources */,
