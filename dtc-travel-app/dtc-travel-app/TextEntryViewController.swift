@@ -8,18 +8,23 @@
 
 import UIKit
 
-class TextEntryViewController: UIViewController, UITextViewDelegate, UITextFieldDelegate {
+class TextEntryViewController: UIViewController, UITextViewDelegate, UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
     
     @IBOutlet weak var titleInputField: UITextField!
     @IBOutlet weak var textEntryField: UITextView!
+    @IBOutlet weak var categoryPickerView: UIPickerView!
     
     @IBAction func postTapped(_ sender: Any) {
     }
+    
+    final private let categories = ["Food", "People", "Buildings"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.textEntryField.delegate = self
         self.titleInputField.delegate = self
+        self.categoryPickerView.dataSource = self
+        self.categoryPickerView.delegate = self
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
@@ -36,6 +41,18 @@ class TextEntryViewController: UIViewController, UITextViewDelegate, UITextField
             return false
         }
         return true
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return categories.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return categories[row]
     }
     
     override func didReceiveMemoryWarning() {
