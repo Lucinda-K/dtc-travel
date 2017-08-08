@@ -15,6 +15,7 @@ class TextEntryViewController: UIViewController, UITextViewDelegate, UITextField
     @IBOutlet weak var categoryPickerView: UIPickerView!
     
     @IBAction func postTapped(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     final private let categories = ["Food", "People", "Buildings"]
