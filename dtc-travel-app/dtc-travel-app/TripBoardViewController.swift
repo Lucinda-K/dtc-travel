@@ -27,6 +27,8 @@ class TripBoardViewController: UIViewController, UIPopoverPresentationController
     final fileprivate let buildingImages = ["writing1.png", "speaker.png", "writing2.png"]
     private var entryPopover:EntryOptionsPopoverViewController?
     
+    var capturedImage: UIImage?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.register(UINib(nibName: "CategoryCell", bundle: nil), forCellReuseIdentifier: reuseId)
@@ -46,6 +48,10 @@ class TripBoardViewController: UIViewController, UIPopoverPresentationController
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "presentCameraEntry" {
             self.navigationController?.popViewController(animated: true)
+        }
+        if segue.identifier == "usePhoto" {
+            let destination = segue.destination as! CaptionMediaViewController
+            destination.capturedImage = self.capturedImage
         }
     }
     
@@ -79,6 +85,21 @@ class TripBoardViewController: UIViewController, UIPopoverPresentationController
         self.entryPopover?.dismiss(animated: false, completion: {
             self.showCamera()
         })
+    }
+    
+    // Use photo from image picker
+    func captionCapturedImage(capturedImage: UIImage) {
+        self.capturedImage = capturedImage;
+        
+    }
+    
+    func presentCaptionView(capturedImage: UIImage) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let controller = storyboard.instantiateViewController(withIdentifier: "captionView") as? CaptionMediaViewController {
+            controller.capturedImage = capturedImage
+            self.dismiss(animated: true, completion: nil)
+            self.present(controller, animated: true, completion: nil)
+        }
     }
 }
 
@@ -165,7 +186,10 @@ extension TripBoardViewController: UIImagePickerControllerDelegate, UINavigation
         // Dismiss the view controller a
         picker.dismiss(animated: true, completion: nil)
         
+        // Get the picture we took
+        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
         
+        self.presentCaptionView(capturedImage: image)
     }
 }
 
