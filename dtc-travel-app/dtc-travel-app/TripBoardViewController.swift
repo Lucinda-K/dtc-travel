@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MobileCoreServices
 
 class TripBoardViewController: UIViewController, UIPopoverPresentationControllerDelegate {
     
@@ -123,9 +124,7 @@ extension TripBoardViewController: UITableViewDataSource, UITableViewDelegate{
         }
         
         let numOfRows = (numCells * 100 / rect.width).rounded()
-        print("numOfRows = (\(numCells) * 100 / \(rect.width)).rounded()")
-        return (numCells / 4.0).rounded() * 100
-//        return CGFloat(numOfRows * 100)
+        return CGFloat(numOfRows * 100)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -164,7 +163,6 @@ extension TripBoardViewController: UITableViewDataSource, UITableViewDelegate{
     } 
 }
 
-
 extension TripBoardViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     func showCamera() {
@@ -173,6 +171,7 @@ extension TripBoardViewController: UIImagePickerControllerDelegate, UINavigation
             // Setup and present default Camera View Controller
             let imagePicker = UIImagePickerController()
             imagePicker.delegate = self
+            imagePicker.mediaTypes = [kUTTypeMovie as String]
             imagePicker.sourceType = .camera
             imagePicker.allowsEditing = false
             self.present(imagePicker, animated: true, completion: nil)
@@ -190,6 +189,22 @@ extension TripBoardViewController: UIImagePickerControllerDelegate, UINavigation
         
         self.presentCaptionView(capturedImage: image)
     }
+}
+
+// Entry Creation
+extension TripBoardViewController {
+    func presentAudio() {
+        let storyboard = UIStoryboard(name: "AudioEntry", bundle: nil)
+        if let controller = storyboard.instantiateViewController(withIdentifier: "audioEntry") as? RecordAudioViewController {
+            self.dismiss(animated: true, completion: nil)
+            self.present(controller, animated: true, completion: nil)
+        }
+    }
     
-    
+    func presentText() {
+        let storyboard = UIStoryboard(name: "TextEntry", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "textEntry")
+        self.dismiss(animated: true, completion: nil)
+        self.present(controller, animated: true, completion: nil)
+    }
 }
