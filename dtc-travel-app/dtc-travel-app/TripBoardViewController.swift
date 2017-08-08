@@ -169,13 +169,20 @@ extension TripBoardViewController: UIImagePickerControllerDelegate, UINavigation
     }
 }
 
-// Audio functionality
+// Entry Creation
 extension TripBoardViewController {
     func presentAudio() {
-        let storyboard = UIStoryboard(name: "Audio", bundle: nil)
-        if let controller = storyboard.instantiateViewController(withIdentifier: "audio") as? RecordAudioViewController {
-            self.dismiss(animated: true, completion: {})
+        let storyboard = UIStoryboard(name: "AudioEntry", bundle: nil)
+        if let controller = storyboard.instantiateViewController(withIdentifier: "audioEntry") as? RecordAudioViewController {
+            self.dismiss(animated: true, completion: nil)
             self.present(controller, animated: true, completion: nil)
         }
+    }
+    
+    func presentText() {
+        let storyboard = UIStoryboard(name: "TextEntry", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "textEntry")
+        self.dismiss(animated: true, completion: nil)
+        self.present(controller, animated: true, completion: nil)
     }
 }
