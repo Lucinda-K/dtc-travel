@@ -124,9 +124,7 @@ extension TripBoardViewController: UITableViewDataSource, UITableViewDelegate{
         }
         
         let numOfRows = (numCells * 100 / rect.width).rounded()
-        print("numOfRows = (\(numCells) * 100 / \(rect.width)).rounded()")
-        return (numCells / 4.0).rounded() * 100
-//        return CGFloat(numOfRows * 100)
+        return CGFloat(numOfRows * 100)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
