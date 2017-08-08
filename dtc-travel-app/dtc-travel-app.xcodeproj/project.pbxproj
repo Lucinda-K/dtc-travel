@@ -7,7 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8B422B001F2839D400FED9CB /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B422AFF1F2839D400FED9CB /* CameraViewController.swift */; };
+		6A0973A21F357CB3005141CF /* writing3.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A09739D1F357CB3005141CF /* writing3.png */; };
+		6A0973A31F357CB3005141CF /* writing2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A09739E1F357CB3005141CF /* writing2.png */; };
+		6A0973A41F357CB3005141CF /* writing1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A09739F1F357CB3005141CF /* writing1.png */; };
+		6A0973AA1F357D53005141CF /* people1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6A0973A81F357D53005141CF /* people1.jpg */; };
+		6A0973AC1F357E6D005141CF /* people2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A0973AB1F357E6D005141CF /* people2.png */; };
+		6A0973AE1F357F32005141CF /* food3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6A0973AD1F357F32005141CF /* food3.jpeg */; };
+		6A193E041F2EB87E001BA9B6 /* EntryOptionsPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A193E031F2EB87E001BA9B6 /* EntryOptionsPopoverViewController.swift */; };
+		6A193E0C1F300125001BA9B6 /* speaker.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A193E091F300125001BA9B6 /* speaker.png */; };
+		6A193E0D1F300125001BA9B6 /* food1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6A193E0A1F300125001BA9B6 /* food1.jpg */; };
+		6A193E0E1F300125001BA9B6 /* food2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6A193E0B1F300125001BA9B6 /* food2.jpg */; };
+		6A193E101F300195001BA9B6 /* EntryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A193E0F1F300195001BA9B6 /* EntryCell.xib */; };
+		6A193E121F3001D4001BA9B6 /* EntryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A193E111F3001D4001BA9B6 /* EntryCollectionViewCell.swift */; };
+		6AA4755A1F2E9EE700F3B5CF /* TripBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA475591F2E9EE700F3B5CF /* TripBoardViewController.swift */; };
+		6AA4755C1F2EA07700F3B5CF /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AA4755B1F2EA07700F3B5CF /* CategoryCell.xib */; };
+		6AA4755E1F2EA36300F3B5CF /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA4755D1F2EA36300F3B5CF /* CategoryTableViewCell.swift */; };
 		8BA38EF81F282FB9004186BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA38EF71F282FB9004186BA /* AppDelegate.swift */; };
 		8BA38EFA1F282FB9004186BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA38EF91F282FB9004186BA /* ViewController.swift */; };
 		8BA38EFD1F282FB9004186BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BA38EFB1F282FB9004186BA /* Main.storyboard */; };
@@ -35,7 +49,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8B422AFF1F2839D400FED9CB /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		6A09739D1F357CB3005141CF /* writing3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = writing3.png; sourceTree = "<group>"; };
+		6A09739E1F357CB3005141CF /* writing2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = writing2.png; sourceTree = "<group>"; };
+		6A09739F1F357CB3005141CF /* writing1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = writing1.png; sourceTree = "<group>"; };
+		6A0973A81F357D53005141CF /* people1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = people1.jpg; sourceTree = "<group>"; };
+		6A0973AB1F357E6D005141CF /* people2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = people2.png; sourceTree = "<group>"; };
+		6A0973AD1F357F32005141CF /* food3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = food3.jpeg; sourceTree = "<group>"; };
+		6A193E031F2EB87E001BA9B6 /* EntryOptionsPopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryOptionsPopoverViewController.swift; sourceTree = "<group>"; };
+		6A193E091F300125001BA9B6 /* speaker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = speaker.png; sourceTree = "<group>"; };
+		6A193E0A1F300125001BA9B6 /* food1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = food1.jpg; sourceTree = "<group>"; };
+		6A193E0B1F300125001BA9B6 /* food2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = food2.jpg; sourceTree = "<group>"; };
+		6A193E0F1F300195001BA9B6 /* EntryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EntryCell.xib; sourceTree = "<group>"; };
+		6A193E111F3001D4001BA9B6 /* EntryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryCollectionViewCell.swift; sourceTree = "<group>"; };
+		6AA475591F2E9EE700F3B5CF /* TripBoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripBoardViewController.swift; sourceTree = "<group>"; };
+		6AA4755B1F2EA07700F3B5CF /* CategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
+		6AA4755D1F2EA36300F3B5CF /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		8BA38EF41F282FB9004186BA /* dtc-travel-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "dtc-travel-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BA38EF71F282FB9004186BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8BA38EF91F282FB9004186BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +104,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A193E011F2EAD45001BA9B6 /* Use Cases */ = {
+			isa = PBXGroup;
+			children = (
+				6A193E021F2EAD50001BA9B6 /* Trip Board */,
+			);
+			name = "Use Cases";
+			sourceTree = "<group>";
+		};
+		6A193E021F2EAD50001BA9B6 /* Trip Board */ = {
+			isa = PBXGroup;
+			children = (
+				6AA475591F2E9EE700F3B5CF /* TripBoardViewController.swift */,
+				6AA4755B1F2EA07700F3B5CF /* CategoryCell.xib */,
+				6AA4755D1F2EA36300F3B5CF /* CategoryTableViewCell.swift */,
+				6A193E031F2EB87E001BA9B6 /* EntryOptionsPopoverViewController.swift */,
+				6A193E0F1F300195001BA9B6 /* EntryCell.xib */,
+				6A193E111F3001D4001BA9B6 /* EntryCollectionViewCell.swift */,
+			);
+			name = "Trip Board";
+			sourceTree = "<group>";
+		};
+		6A193E071F300108001BA9B6 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				6A0973AB1F357E6D005141CF /* people2.png */,
+				6A0973A81F357D53005141CF /* people1.jpg */,
+				6A09739D1F357CB3005141CF /* writing3.png */,
+				6A09739E1F357CB3005141CF /* writing2.png */,
+				6A09739F1F357CB3005141CF /* writing1.png */,
+				6A193E091F300125001BA9B6 /* speaker.png */,
+				6A0973AD1F357F32005141CF /* food3.jpeg */,
+				6A193E0A1F300125001BA9B6 /* food1.jpg */,
+				6A193E0B1F300125001BA9B6 /* food2.jpg */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		8BA38EEB1F282FB8004186BA = {
 			isa = PBXGroup;
 			children = (
@@ -99,13 +164,14 @@
 		8BA38EF61F282FB9004186BA /* dtc-travel-app */ = {
 			isa = PBXGroup;
 			children = (
+				6A193E011F2EAD45001BA9B6 /* Use Cases */,
+				6A193E071F300108001BA9B6 /* Images */,
 				8BA38EF71F282FB9004186BA /* AppDelegate.swift */,
 				8BA38EF91F282FB9004186BA /* ViewController.swift */,
 				8BA38EFB1F282FB9004186BA /* Main.storyboard */,
 				8BA38EFE1F282FB9004186BA /* Assets.xcassets */,
 				8BA38F001F282FB9004186BA /* LaunchScreen.storyboard */,
 				8BA38F031F282FB9004186BA /* Info.plist */,
-				8B422AFF1F2839D400FED9CB /* CameraViewController.swift */,
 			);
 			path = "dtc-travel-app";
 			sourceTree = "<group>";
@@ -236,9 +302,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A193E101F300195001BA9B6 /* EntryCell.xib in Resources */,
 				8BA38F021F282FB9004186BA /* LaunchScreen.storyboard in Resources */,
 				8BA38EFF1F282FB9004186BA /* Assets.xcassets in Resources */,
+				6A0973A21F357CB3005141CF /* writing3.png in Resources */,
+				6A0973AC1F357E6D005141CF /* people2.png in Resources */,
 				8BA38EFD1F282FB9004186BA /* Main.storyboard in Resources */,
+				6A193E0D1F300125001BA9B6 /* food1.jpg in Resources */,
+				6A0973AA1F357D53005141CF /* people1.jpg in Resources */,
+				6AA4755C1F2EA07700F3B5CF /* CategoryCell.xib in Resources */,
+				6A193E0E1F300125001BA9B6 /* food2.jpg in Resources */,
+				6A193E0C1F300125001BA9B6 /* speaker.png in Resources */,
+				6A0973A31F357CB3005141CF /* writing2.png in Resources */,
+				6A0973A41F357CB3005141CF /* writing1.png in Resources */,
+				6A0973AE1F357F32005141CF /* food3.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,9 +340,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A193E041F2EB87E001BA9B6 /* EntryOptionsPopoverViewController.swift in Sources */,
+				6AA4755E1F2EA36300F3B5CF /* CategoryTableViewCell.swift in Sources */,
 				8BA38EFA1F282FB9004186BA /* ViewController.swift in Sources */,
 				8BA38EF81F282FB9004186BA /* AppDelegate.swift in Sources */,
-				8B422B001F2839D400FED9CB /* CameraViewController.swift in Sources */,
+				6AA4755A1F2E9EE700F3B5CF /* TripBoardViewController.swift in Sources */,
+				6A193E121F3001D4001BA9B6 /* EntryCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
