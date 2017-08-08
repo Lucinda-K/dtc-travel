@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Text Entry View Controller-->
         <scene sceneID="2cY-yO-p9C">
             <objects>
-                <viewController storyboardIdentifier="textEntry" useStoryboardIdentifierAsRestorationIdentifier="YES" id="b0w-Dh-GQP" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="textEntry" useStoryboardIdentifierAsRestorationIdentifier="YES" id="b0w-Dh-GQP" customClass="TextEntryViewController" customModule="dtc_travel_app" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iUf-vC-ocX"/>
                         <viewControllerLayoutGuide type="bottom" id="sep-jj-D1h"/>
@@ -48,6 +48,9 @@
                                 <state key="normal" title="Post">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="postTapped:" destination="b0w-Dh-GQP" eventType="touchUpInside" id="bf7-0j-JN9"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.41176470590000003" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -64,6 +67,10 @@
                             <constraint firstItem="P76-ne-X5e" firstAttribute="top" secondItem="rxH-9r-jna" secondAttribute="bottom" constant="26" id="xe7-h5-jut"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textEntryField" destination="rxH-9r-jna" id="5G3-sk-azf"/>
+                        <outlet property="titleInputField" destination="CSa-Vh-bOq" id="Qor-Xv-iOs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2O5-zU-FCx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
