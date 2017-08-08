@@ -171,7 +171,7 @@ extension TripBoardViewController: UIImagePickerControllerDelegate, UINavigation
             // Setup and present default Camera View Controller
             let imagePicker = UIImagePickerController()
             imagePicker.delegate = self
-            imagePicker.mediaTypes = [kUTTypeMovie as String]
+            imagePicker.mediaTypes = [kUTTypeMovie as String, kUTTypeImage as String]
             imagePicker.sourceType = .camera
             imagePicker.allowsEditing = false
             self.present(imagePicker, animated: true, completion: nil)
@@ -184,10 +184,13 @@ extension TripBoardViewController: UIImagePickerControllerDelegate, UINavigation
         // Dismiss the view controller a
         picker.dismiss(animated: true, completion: nil)
         
-        // Get the picture we took
-        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
         
-        self.presentCaptionView(capturedImage: image)
+        
+        // Get the picture we took
+        let image = info[UIImagePickerControllerOriginalImage] as? UIImage ?? UIImage(named: "food3.jpeg")
+        
+        
+        self.presentCaptionView(capturedImage: image!)
     }
 }
 

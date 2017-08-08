@@ -23,6 +23,7 @@ class RecordAudioViewController: UIViewController {
                 self.button.setTitle("Submit", for: .normal)
                 self.audioImage.isHidden = true
             case "submit":
+                self.dismiss(animated: true, completion: nil)
                 break
             default:
                 break
