@@ -41,10 +41,6 @@ class RecordAudioViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-//    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-//        <#code#>
-//    }
-    
 
     /*
     // MARK: - Navigation

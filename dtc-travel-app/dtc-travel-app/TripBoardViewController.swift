@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MobileCoreServices
 
 class TripBoardViewController: UIViewController, UIPopoverPresentationControllerDelegate {
     
@@ -151,6 +152,7 @@ extension TripBoardViewController: UIImagePickerControllerDelegate, UINavigation
             // Setup and present default Camera View Controller
             let imagePicker = UIImagePickerController()
             imagePicker.delegate = self
+            imagePicker.mediaTypes = [kUTTypeMovie as String]
             imagePicker.sourceType = .camera
             imagePicker.allowsEditing = false
             self.present(imagePicker, animated: true, completion: nil)
@@ -171,8 +173,9 @@ extension TripBoardViewController: UIImagePickerControllerDelegate, UINavigation
 extension TripBoardViewController {
     func presentAudio() {
         let storyboard = UIStoryboard(name: "Audio", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "audio")
-        self.dismiss(animated: true, completion: {})
-        self.present(controller, animated: true, completion: nil)
+        if let controller = storyboard.instantiateViewController(withIdentifier: "audio") as? RecordAudioViewController {
+            self.dismiss(animated: true, completion: {})
+            self.present(controller, animated: true, completion: nil)
+        }
     }
 }
