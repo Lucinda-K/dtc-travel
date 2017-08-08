@@ -143,7 +143,6 @@ extension TripBoardViewController: UITableViewDataSource, UITableViewDelegate{
     } 
 }
 
-
 extension TripBoardViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     func showCamera() {
@@ -166,6 +165,14 @@ extension TripBoardViewController: UIImagePickerControllerDelegate, UINavigation
         
         
     }
-    
-    
+}
+
+// Audio functionality
+extension TripBoardViewController {
+    func presentAudio() {
+        let storyboard = UIStoryboard(name: "Audio", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "audio")
+        self.dismiss(animated: true, completion: {})
+        self.present(controller, animated: true, completion: nil)
+    }
 }

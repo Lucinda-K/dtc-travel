@@ -6,13 +6,15 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Record Audio View Controller-->
         <scene sceneID="eYL-JP-tRl">
             <objects>
-                <viewController storyboardIdentifier="audio" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MOY-1K-Iix" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="audio" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MOY-1K-Iix" customClass="RecordAudioViewController" customModule="dtc_travel_app" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AAe-Hd-Idc"/>
                         <viewControllerLayoutGuide type="bottom" id="Lum-lt-MFU"/>
@@ -20,12 +22,50 @@
                     <view key="view" contentMode="scaleToFill" id="1nF-22-xET">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7n4-c9-THr">
+                                <rect key="frame" x="106" y="586" width="163" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="5rL-rd-4Mw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <state key="normal" title="Record">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="MOY-1K-Iix" eventType="touchUpInside" id="WbM-gS-Q1o"/>
+                                </connections>
+                            </button>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="microphone.png" translatesAutoresizingMaskIntoConstraints="NO" id="gj0-ha-6W1">
+                                <rect key="frame" x="145" y="291" width="85" height="85"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="gj0-ha-6W1" secondAttribute="height" multiplier="1:1" id="fRa-Mt-Nv8"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="7n4-c9-THr" firstAttribute="leading" secondItem="1nF-22-xET" secondAttribute="leadingMargin" constant="90" id="Lkd-0a-wcE"/>
+                            <constraint firstItem="7n4-c9-THr" firstAttribute="centerX" secondItem="1nF-22-xET" secondAttribute="centerX" id="SEQ-3G-fGL"/>
+                            <constraint firstItem="gj0-ha-6W1" firstAttribute="leading" secondItem="1nF-22-xET" secondAttribute="leadingMargin" constant="129" id="Uew-a4-mAe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7n4-c9-THr" secondAttribute="trailing" constant="90" id="Vg4-Im-W95"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gj0-ha-6W1" secondAttribute="trailing" constant="129" id="lbl-Y9-RUg"/>
+                            <constraint firstItem="Lum-lt-MFU" firstAttribute="top" secondItem="7n4-c9-THr" secondAttribute="bottom" constant="36" id="msu-Jf-8YM"/>
+                            <constraint firstItem="gj0-ha-6W1" firstAttribute="centerY" secondItem="1nF-22-xET" secondAttribute="centerY" id="pxb-GC-1Js"/>
+                            <constraint firstItem="gj0-ha-6W1" firstAttribute="centerX" secondItem="1nF-22-xET" secondAttribute="centerX" id="qNN-Ky-tAQ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="audioImage" destination="gj0-ha-6W1" id="GHv-51-P4d"/>
+                        <outlet property="button" destination="7n4-c9-THr" id="ihV-yW-rbN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QVQ-NO-sWu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-161" y="151"/>
+            <point key="canvasLocation" x="-162.40000000000001" y="150.67466266866569"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="microphone.png" width="128" height="128"/>
+    </resources>
 </document>

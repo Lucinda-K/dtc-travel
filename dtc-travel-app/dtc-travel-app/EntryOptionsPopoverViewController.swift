@@ -93,6 +93,8 @@ class EntryOptionsPopoverViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
             self.delegate?.presentCamera()
+        } else if indexPath.row == 1 {
+            self.delegate?.presentAudio()
         }
     }
 
