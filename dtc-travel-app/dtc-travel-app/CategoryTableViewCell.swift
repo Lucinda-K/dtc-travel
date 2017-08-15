@@ -47,7 +47,7 @@ class CategoryTableViewCell: UITableViewCell, UICollectionViewDataSource, UIColl
             
             switch entryType {
             case "image", "audio":
-                delegate.presentImageEntry()
+                delegate.presentImageEntry(entry: entries[indexPath.row])
             case "text":
                 delegate.presentTextEntry(entry: entries[indexPath.row])
             default:

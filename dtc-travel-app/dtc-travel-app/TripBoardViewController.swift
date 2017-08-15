@@ -237,11 +237,15 @@ extension TripBoardViewController {
         let storyboard = UIStoryboard(name: "TextEntryDetail", bundle: nil)
         if let controller = storyboard.instantiateViewController(withIdentifier: "textEntryDetail") as? TextEntryDetailViewController {
             self.present(controller, animated: true, completion: nil)
-            controller.configure(entryModel: entry, delegate: self)
+            controller.configure(entryModel: entry)
         }
     }
     
-    func presentImageEntry () {
-        print("presentImageEntry")
+    func presentImageEntry (entry:Entry) {
+        let storyboard = UIStoryboard(name: "ImageAudioEntryDetail", bundle: nil)
+        if let controller = storyboard.instantiateViewController(withIdentifier: "imageAudioEntryDetail") as? ImageAudioEntryDetailViewController {
+            self.present(controller, animated: true, completion: nil)
+            controller.configure(entry: entry)
+        }
     }
 }
