@@ -39,7 +39,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TDw-XP-5OQ">
-                                <rect key="frame" x="86" y="574" width="203" height="36"/>
+                                <rect key="frame" x="86" y="573.5" width="203" height="36.5"/>
                                 <color key="backgroundColor" red="0.08235294118" green="0.40000000000000002" blue="0.65490196079999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="TDw-XP-5OQ" secondAttribute="height" multiplier="101:18" id="zWn-7Q-nsb"/>
