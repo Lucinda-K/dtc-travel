@@ -10,4 +10,5 @@ import UIKit
 
 class EntryCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var image: UIImageView!
+    var type:String = ""
 }

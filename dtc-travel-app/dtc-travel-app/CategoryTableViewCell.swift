@@ -14,6 +14,9 @@ class CategoryTableViewCell: UITableViewCell, UICollectionViewDataSource, UIColl
     
     private let reuseId:String = "entryCell"
     private var images:[String] = []
+    private var types:[String] = []
+    var entryType:String = ""
+    private var delegate:TripBoardViewController?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,8 +30,10 @@ class CategoryTableViewCell: UITableViewCell, UICollectionViewDataSource, UIColl
         // Configure the view for the selected state
     }
     
-    func configure (images:[String]) {
+    func configure (images:[String], types:[String], delegate:TripBoardViewController) {
         self.images = images
+        self.types = types
+        self.delegate = delegate
     }
 
     
@@ -39,6 +44,21 @@ class CategoryTableViewCell: UITableViewCell, UICollectionViewDataSource, UIColl
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.images.count
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let delegate = self.delegate {
+            let entryType = types[indexPath.row]
+            
+            switch entryType {
+            case "image", "audio":
+                delegate.presentImageEntry()
+            case "text":
+                delegate.presentTextEntry()
+            default:
+                break
+            }
+        }
+    }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseId, for: indexPath) as? EntryCollectionViewCell else {
@@ -46,7 +66,7 @@ class CategoryTableViewCell: UITableViewCell, UICollectionViewDataSource, UIColl
         }
         
         cell.image.image = UIImage(named: self.images[indexPath.row])
-        // cell.backgroundColor = UIColor.gray
+        cell.type = types[indexPath.row]
         cell.layer.cornerRadius = 10.0
         return cell
     }

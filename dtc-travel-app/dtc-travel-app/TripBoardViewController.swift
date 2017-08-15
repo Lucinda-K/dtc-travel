@@ -23,8 +23,11 @@ class TripBoardViewController: UIViewController, UIPopoverPresentationController
     // Class attributes
     final fileprivate let reuseId = "categoryCell"
     final fileprivate let foodImages = ["food1.jpg", "speaker.png", "writing3.png", "food2.jpg", "food3.jpeg"]
+    final fileprivate let foodEntryTypes = ["image", "audio", "text", "image", "image"]
     final fileprivate let peopleImages = ["speaker.png", "people1.jpg", "people2.png", "speaker.png", "writing1.png"]
+    final fileprivate let peopleEntryTypes = ["audio", "image", "image", "audio", "text"]
     final fileprivate let buildingImages = ["writing1.png", "speaker.png", "writing2.png"]
+    final fileprivate let buildingEntryTypes = ["text", "audio", "text"]
     private var entryPopover:EntryOptionsPopoverViewController?
     
     var capturedImage: UIImage?
@@ -151,11 +154,11 @@ extension TripBoardViewController: UITableViewDataSource, UITableViewDelegate{
         
         switch indexPath.section {
         case 0:
-            cell.configure(images: self.foodImages)
+            cell.configure(images: self.foodImages, types: self.foodEntryTypes, delegate: self)
         case 1:
-            cell.configure(images: self.peopleImages)
+            cell.configure(images: self.peopleImages, types: self.peopleEntryTypes, delegate: self)
         case 2:
-            cell.configure(images: self.buildingImages)
+            cell.configure(images: self.buildingImages, types: self.buildingEntryTypes, delegate: self)
         default:
             break
         }
@@ -209,5 +212,16 @@ extension TripBoardViewController {
         let controller = storyboard.instantiateViewController(withIdentifier: "textEntry")
         self.dismiss(animated: true, completion: nil)
         self.present(controller, animated: true, completion: nil)
+    }
+}
+
+// Entry Detail
+extension TripBoardViewController {
+    func presentTextEntry () {
+        
+    }
+    
+    func presentImageEntry () {
+        
     }
 }
