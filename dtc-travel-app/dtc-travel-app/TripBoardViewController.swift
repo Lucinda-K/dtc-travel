@@ -22,6 +22,7 @@ class TripBoardViewController: UIViewController, UIPopoverPresentationController
     
     // Class attributes
     final fileprivate let reuseId = "categoryCell"
+    var foodEntries:[Entry] = []
     final fileprivate let foodImages = ["food1.jpg", "speaker.png", "writing3.png", "food2.jpg", "food3.jpeg"]
     final fileprivate let foodEntryTypes = ["image", "audio", "text", "image", "image"]
     final fileprivate let peopleImages = ["speaker.png", "people1.jpg", "people2.png", "speaker.png", "writing1.png"]
@@ -36,6 +37,16 @@ class TripBoardViewController: UIViewController, UIPopoverPresentationController
         super.viewDidLoad()
         self.tableView.register(UINib(nibName: "CategoryCell", bundle: nil), forCellReuseIdentifier: reuseId)
         // Do any additional setup after loading the view.
+        
+        // Populate foodEntries
+        foodEntries.append(Entry(type: "image", title: "food1", imageString: "food1.jpg", textEntry: nil, category: "Food"))
+        foodEntries.append(Entry(type: "audio", title: "food2", imageString: "speaker.png", textEntry: nil, category: "Food"))
+        foodEntries.append(Entry(type: "text", title: "food3", imageString: "writing3.png", textEntry: "text", category: "Food"))
+        foodEntries.append(Entry(type: "image", title: "food4", imageString: "food2.jpg", textEntry: "image", category: "Food"))
+        foodEntries.append(Entry(type: "image", title: "food5", imageString: "food3.jpeg", textEntry: "image", category: "Food"))
+        
+        // Populate peopleEntries
+        
     }
 
     
