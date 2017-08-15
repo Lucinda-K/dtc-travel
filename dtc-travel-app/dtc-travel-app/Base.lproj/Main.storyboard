@@ -39,22 +39,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v76-B8-07c">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="progress_bar.png" translatesAutoresizingMaskIntoConstraints="NO" id="v76-B8-07c">
                                 <rect key="frame" x="0.0" y="72" width="375" height="30"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="JiY-WF-RhK"/>
                                 </constraints>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WdK-Aq-fPs">
-                                <rect key="frame" x="0.0" y="110" width="375" height="487"/>
+                                <rect key="frame" x="8" y="102" width="359" height="495"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="categoryCell" id="6qF-75-wOW" customClass="CategoryTableViewCell" customModule="dtc_travel_app" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                        <rect key="frame" x="0.0" y="28" width="359" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6qF-75-wOW" id="93L-BZ-XzH">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="359" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -65,10 +64,10 @@
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b7z-c7-CZA">
-                                <rect key="frame" x="0.0" y="605" width="375" height="62"/>
+                                <rect key="frame" x="0.0" y="597" width="375" height="70"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bIt-QU-TbJ">
-                                        <rect key="frame" x="161.5" y="5.5" width="51" height="51"/>
+                                        <rect key="frame" x="161.5" y="9.5" width="51" height="51"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="bIt-QU-TbJ" secondAttribute="height" multiplier="1:1" id="YRz-BB-XQE"/>
                                         </constraints>
@@ -90,14 +89,14 @@
                         <constraints>
                             <constraint firstItem="v76-B8-07c" firstAttribute="leading" secondItem="ZWT-XK-Kxd" secondAttribute="leading" id="8yd-ec-3OA"/>
                             <constraint firstAttribute="trailing" secondItem="b7z-c7-CZA" secondAttribute="trailing" id="Mt6-2V-FUb"/>
-                            <constraint firstItem="WdK-Aq-fPs" firstAttribute="top" secondItem="v76-B8-07c" secondAttribute="bottom" constant="8" id="TBn-68-vI8"/>
+                            <constraint firstItem="WdK-Aq-fPs" firstAttribute="top" secondItem="v76-B8-07c" secondAttribute="bottom" id="TBn-68-vI8"/>
                             <constraint firstItem="AOb-gI-sCh" firstAttribute="top" secondItem="b7z-c7-CZA" secondAttribute="bottom" id="ZgC-92-wjJ"/>
-                            <constraint firstAttribute="trailing" secondItem="WdK-Aq-fPs" secondAttribute="trailing" id="bTj-Bn-0PD"/>
-                            <constraint firstItem="WdK-Aq-fPs" firstAttribute="leading" secondItem="ZWT-XK-Kxd" secondAttribute="leading" id="bjz-uv-KSL"/>
+                            <constraint firstAttribute="trailing" secondItem="WdK-Aq-fPs" secondAttribute="trailing" constant="8" id="bTj-Bn-0PD"/>
+                            <constraint firstItem="WdK-Aq-fPs" firstAttribute="leading" secondItem="ZWT-XK-Kxd" secondAttribute="leading" constant="8" id="bjz-uv-KSL"/>
                             <constraint firstItem="b7z-c7-CZA" firstAttribute="leading" secondItem="ZWT-XK-Kxd" secondAttribute="leading" id="h8J-Wj-SCU"/>
                             <constraint firstItem="AOb-gI-sCh" firstAttribute="top" secondItem="WdK-Aq-fPs" secondAttribute="bottom" constant="70" id="nSq-az-mLj"/>
                             <constraint firstItem="v76-B8-07c" firstAttribute="top" secondItem="YXc-I7-lph" secondAttribute="bottom" constant="8" id="q8J-rC-I63"/>
-                            <constraint firstItem="b7z-c7-CZA" firstAttribute="top" secondItem="WdK-Aq-fPs" secondAttribute="bottom" constant="8" id="rfl-8y-gt7"/>
+                            <constraint firstItem="b7z-c7-CZA" firstAttribute="top" secondItem="WdK-Aq-fPs" secondAttribute="bottom" id="rfl-8y-gt7"/>
                             <constraint firstAttribute="trailing" secondItem="v76-B8-07c" secondAttribute="trailing" id="ymY-OP-1tw"/>
                         </constraints>
                     </view>
@@ -271,4 +270,7 @@
             <point key="canvasLocation" x="-3055" y="950"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="progress_bar.png" width="320" height="30"/>
+    </resources>
 </document>
