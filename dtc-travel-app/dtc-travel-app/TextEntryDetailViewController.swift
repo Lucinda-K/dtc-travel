@@ -15,13 +15,16 @@ class TextEntryDetailViewController: UIViewController {
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var textEntry: UITextView!
     
+    // IBActions
+    @IBAction func doneTapped(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     private var delegate:UIViewController?
     private var entryModel:Entry?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,6 +35,10 @@ class TextEntryDetailViewController: UIViewController {
     func configure (entryModel:Entry, delegate:UIViewController) {
         self.entryModel = entryModel
         self.delegate = delegate
+        
+        self.titleLabel.text = entryModel.title ?? ""
+        self.categoryLabel.text = entryModel.category
+        self.textEntry.text = entryModel.textEntry ?? ""
     }
     
 

@@ -13,15 +13,12 @@ class CategoryTableViewCell: UITableViewCell, UICollectionViewDataSource, UIColl
     @IBOutlet weak var collectionView: UICollectionView!
     
     private let reuseId:String = "entryCell"
-    private var images:[String] = []
-    private var types:[String] = []
-    var entryType:String = ""
+    private var entries:[Entry] = []
     private var delegate:TripBoardViewController?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         self.collectionView.register(UINib(nibName: "EntryCell", bundle: nil), forCellWithReuseIdentifier: reuseId)
-        print(self.collectionView.bounds.width)
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -30,9 +27,8 @@ class CategoryTableViewCell: UITableViewCell, UICollectionViewDataSource, UIColl
         // Configure the view for the selected state
     }
     
-    func configure (images:[String], types:[String], delegate:TripBoardViewController) {
-        self.images = images
-        self.types = types
+    func configure (entries:[Entry], delegate:TripBoardViewController) {
+        self.entries = entries
         self.delegate = delegate
     }
 
@@ -42,18 +38,18 @@ class CategoryTableViewCell: UITableViewCell, UICollectionViewDataSource, UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.images.count
+        return self.entries.count
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let delegate = self.delegate {
-            let entryType = types[indexPath.row]
+            let entryType = entries[indexPath.row].type
             
             switch entryType {
             case "image", "audio":
                 delegate.presentImageEntry()
             case "text":
-                delegate.presentTextEntry()
+                delegate.presentTextEntry(entry: entries[indexPath.row])
             default:
                 break
             }
@@ -65,8 +61,7 @@ class CategoryTableViewCell: UITableViewCell, UICollectionViewDataSource, UIColl
             preconditionFailure("Unable to dequeue cell as an EntryCollectionViewCell")
         }
         
-        cell.image.image = UIImage(named: self.images[indexPath.row])
-        cell.type = types[indexPath.row]
+        cell.image.image = UIImage(named: self.entries[indexPath.row].imageString ?? "")
         cell.layer.cornerRadius = 10.0
         return cell
     }

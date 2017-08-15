@@ -23,12 +23,8 @@ class TripBoardViewController: UIViewController, UIPopoverPresentationController
     // Class attributes
     final fileprivate let reuseId = "categoryCell"
     var foodEntries:[Entry] = []
-    final fileprivate let foodImages = ["food1.jpg", "speaker.png", "writing3.png", "food2.jpg", "food3.jpeg"]
-    final fileprivate let foodEntryTypes = ["image", "audio", "text", "image", "image"]
-    final fileprivate let peopleImages = ["speaker.png", "people1.jpg", "people2.png", "speaker.png", "writing1.png"]
-    final fileprivate let peopleEntryTypes = ["audio", "image", "image", "audio", "text"]
-    final fileprivate let buildingImages = ["writing1.png", "speaker.png", "writing2.png"]
-    final fileprivate let buildingEntryTypes = ["text", "audio", "text"]
+    var peopleEntries:[Entry] = []
+    var buildingEntries:[Entry] = []
     private var entryPopover:EntryOptionsPopoverViewController?
     
     var capturedImage: UIImage?
@@ -46,7 +42,16 @@ class TripBoardViewController: UIViewController, UIPopoverPresentationController
         foodEntries.append(Entry(type: "image", title: "food5", imageString: "food3.jpeg", textEntry: "image", category: "Food"))
         
         // Populate peopleEntries
+        peopleEntries.append(Entry(type: "audio", title: "people1", imageString: "speaker.png", textEntry: nil, category: "People"))
+        peopleEntries.append(Entry(type: "image", title: "people2", imageString: "people1.jpg", textEntry: nil, category: "People"))
+        peopleEntries.append(Entry(type: "image", title: "people3", imageString: "people2.png", textEntry: nil, category: "People"))
+        peopleEntries.append(Entry(type: "audio", title: "people4", imageString: "speaker.png", textEntry: nil, category: "People"))
+        peopleEntries.append(Entry(type: "text", title: "people5", imageString: "writing1.png", textEntry: "text", category: "People"))
         
+        // Populate buildingEntries
+        buildingEntries.append(Entry(type: "text", title: "buildings1", imageString: "writing1.png", textEntry: "text", category: "Buildings"))
+        buildingEntries.append(Entry(type: "audio", title: "buildings2", imageString: "speaker.png", textEntry: nil, category: "Buildings"))
+        buildingEntries.append(Entry(type: "text", title: "buildings3", imageString: "writing2.png", textEntry: "text", category: "Buildings"))
     }
 
     
@@ -128,11 +133,11 @@ extension TripBoardViewController: UITableViewDataSource, UITableViewDelegate{
         var numCells = CGFloat(0)
         switch indexPath.section {
         case 0:
-            numCells = CGFloat(self.foodImages.count)
+            numCells = CGFloat(self.foodEntries.count)
         case 1:
-            numCells = CGFloat(self.peopleImages.count)
+            numCells = CGFloat(self.peopleEntries.count)
         case 2:
-            numCells = CGFloat(self.buildingImages.count)
+            numCells = CGFloat(self.buildingEntries.count)
         default:
             break
         }
@@ -165,11 +170,11 @@ extension TripBoardViewController: UITableViewDataSource, UITableViewDelegate{
         
         switch indexPath.section {
         case 0:
-            cell.configure(images: self.foodImages, types: self.foodEntryTypes, delegate: self)
+            cell.configure(entries: self.foodEntries, delegate: self)
         case 1:
-            cell.configure(images: self.peopleImages, types: self.peopleEntryTypes, delegate: self)
+            cell.configure(entries: self.peopleEntries, delegate: self)
         case 2:
-            cell.configure(images: self.buildingImages, types: self.buildingEntryTypes, delegate: self)
+            cell.configure(entries: self.buildingEntries, delegate: self)
         default:
             break
         }
@@ -228,11 +233,15 @@ extension TripBoardViewController {
 
 // Entry Detail
 extension TripBoardViewController {
-    func presentTextEntry () {
-        
+    func presentTextEntry (entry:Entry) {
+        let storyboard = UIStoryboard(name: "TextEntryDetail", bundle: nil)
+        if let controller = storyboard.instantiateViewController(withIdentifier: "textEntryDetail") as? TextEntryDetailViewController {
+            self.present(controller, animated: true, completion: nil)
+            controller.configure(entryModel: entry, delegate: self)
+        }
     }
     
     func presentImageEntry () {
-        
+        print("presentImageEntry")
     }
 }
