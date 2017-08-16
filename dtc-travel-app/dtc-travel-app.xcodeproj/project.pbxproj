@@ -34,6 +34,12 @@
 		6AA4755A1F2E9EE700F3B5CF /* TripBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA475591F2E9EE700F3B5CF /* TripBoardViewController.swift */; };
 		6AA4755C1F2EA07700F3B5CF /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AA4755B1F2EA07700F3B5CF /* CategoryCell.xib */; };
 		6AA4755E1F2EA36300F3B5CF /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA4755D1F2EA36300F3B5CF /* CategoryTableViewCell.swift */; };
+		8B2DEDA21F4277810084E5E0 /* MyTripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2DEDA11F4277810084E5E0 /* MyTripsViewController.swift */; };
+		8B2DEDA41F427C9D0084E5E0 /* dallas.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B2DEDA31F427C9D0084E5E0 /* dallas.jpg */; };
+		8B2DEDA61F4283560084E5E0 /* TripPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2DEDA51F4283560084E5E0 /* TripPhotoCell.swift */; };
+		8B2DEDA91F43D6270084E5E0 /* NewTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2DEDA81F43D6270084E5E0 /* NewTripViewController.swift */; };
+		8B2DEDAB1F43D9470084E5E0 /* CategoryTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2DEDAA1F43D9470084E5E0 /* CategoryTableTableViewController.swift */; };
+		8B2DEDAD1F43D9E70084E5E0 /* CategoryCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2DEDAC1F43D9E70084E5E0 /* CategoryCellTableViewCell.swift */; };
 		8BA38EF81F282FB9004186BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA38EF71F282FB9004186BA /* AppDelegate.swift */; };
 		8BA38EFA1F282FB9004186BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA38EF91F282FB9004186BA /* ViewController.swift */; };
 		8BA38EFD1F282FB9004186BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BA38EFB1F282FB9004186BA /* Main.storyboard */; };
@@ -89,6 +95,12 @@
 		6AA475591F2E9EE700F3B5CF /* TripBoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripBoardViewController.swift; sourceTree = "<group>"; };
 		6AA4755B1F2EA07700F3B5CF /* CategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
 		6AA4755D1F2EA36300F3B5CF /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
+		8B2DEDA11F4277810084E5E0 /* MyTripsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTripsViewController.swift; sourceTree = "<group>"; };
+		8B2DEDA31F427C9D0084E5E0 /* dallas.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = dallas.jpg; path = ../../../../Dropbox/dallas.jpg; sourceTree = "<group>"; };
+		8B2DEDA51F4283560084E5E0 /* TripPhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripPhotoCell.swift; sourceTree = "<group>"; };
+		8B2DEDA81F43D6270084E5E0 /* NewTripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewTripViewController.swift; sourceTree = "<group>"; };
+		8B2DEDAA1F43D9470084E5E0 /* CategoryTableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableTableViewController.swift; sourceTree = "<group>"; };
+		8B2DEDAC1F43D9E70084E5E0 /* CategoryCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCellTableViewCell.swift; sourceTree = "<group>"; };
 		8BA38EF41F282FB9004186BA /* dtc-travel-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "dtc-travel-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BA38EF71F282FB9004186BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8BA38EF91F282FB9004186BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +154,8 @@
 		6A193E011F2EAD45001BA9B6 /* Use Cases */ = {
 			isa = PBXGroup;
 			children = (
+				8B2DEDA71F43D5910084E5E0 /* New Trip */,
+				8B2DEDA01F42776B0084E5E0 /* My Trips */,
 				6A193E021F2EAD50001BA9B6 /* Trip Board */,
 				6A2896721F3940B200E79A52 /* Text Entry */,
 				6A0973AF1F393673005141CF /* Audio Entry */,
@@ -167,6 +181,7 @@
 		6A193E071F300108001BA9B6 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				8B2DEDA31F427C9D0084E5E0 /* dallas.jpg */,
 				6A3ADC701F42AC9C007AD62F /* progress_bar.png */,
 				6A3ADC681F42A693007AD62F /* buildings1.jpg */,
 				6A3ADC661F42A1D5007AD62F /* speaker.png */,
@@ -190,6 +205,25 @@
 				6A2896731F39443700E79A52 /* TextEntryViewController.swift */,
 			);
 			name = "Text Entry";
+			sourceTree = "<group>";
+		};
+		8B2DEDA01F42776B0084E5E0 /* My Trips */ = {
+			isa = PBXGroup;
+			children = (
+				8B2DEDA11F4277810084E5E0 /* MyTripsViewController.swift */,
+				8B2DEDA51F4283560084E5E0 /* TripPhotoCell.swift */,
+			);
+			name = "My Trips";
+			sourceTree = "<group>";
+		};
+		8B2DEDA71F43D5910084E5E0 /* New Trip */ = {
+			isa = PBXGroup;
+			children = (
+				8B2DEDA81F43D6270084E5E0 /* NewTripViewController.swift */,
+				8B2DEDAA1F43D9470084E5E0 /* CategoryTableTableViewController.swift */,
+				8B2DEDAC1F43D9E70084E5E0 /* CategoryCellTableViewCell.swift */,
+			);
+			name = "New Trip";
 			sourceTree = "<group>";
 		};
 		6A3ADC561F428385007AD62F /* Text Entry Detail */ = {
@@ -379,7 +413,7 @@
 				6A193E101F300195001BA9B6 /* EntryCell.xib in Resources */,
 				8BA38F021F282FB9004186BA /* LaunchScreen.storyboard in Resources */,
 				8BA38EFF1F282FB9004186BA /* Assets.xcassets in Resources */,
-				6A3ADC651F42A16A007AD62F /* microphone.png in Resources */,
+				8B2DEDA41F427C9D0084E5E0 /* dallas.jpg in Resources */,
 				6A0973A21F357CB3005141CF /* writing3.png in Resources */,
 				6A3ADC691F42A693007AD62F /* buildings1.jpg in Resources */,
 				6A0973AC1F357E6D005141CF /* people2.png in Resources */,
@@ -418,7 +452,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B2DEDA61F4283560084E5E0 /* TripPhotoCell.swift in Sources */,
 				6A193E041F2EB87E001BA9B6 /* EntryOptionsPopoverViewController.swift in Sources */,
+				8B2DEDAB1F43D9470084E5E0 /* CategoryTableTableViewController.swift in Sources */,
+				8B2DEDA91F43D6270084E5E0 /* NewTripViewController.swift in Sources */,
+				8B2DEDA21F4277810084E5E0 /* MyTripsViewController.swift in Sources */,
 				8BFE9FB31F393BFC006758FF /* CaptionMediaViewController.swift in Sources */,
 				6AA4755E1F2EA36300F3B5CF /* CategoryTableViewCell.swift in Sources */,
 				6A3ADC5A1F428451007AD62F /* TextEntryDetailViewController.swift in Sources */,
@@ -427,6 +465,7 @@
 				6A3ADC5C1F4284D8007AD62F /* Entry.swift in Sources */,
 				6AA4755A1F2E9EE700F3B5CF /* TripBoardViewController.swift in Sources */,
 				6A28966B1F393AFF00E79A52 /* RecordAudioViewController.swift in Sources */,
+				8B2DEDAD1F43D9E70084E5E0 /* CategoryCellTableViewCell.swift in Sources */,
 				6A3ADC611F429B17007AD62F /* ImageAudioEntryDetailViewController.swift in Sources */,
 				6A2896741F39443700E79A52 /* TextEntryViewController.swift in Sources */,
 				6A193E121F3001D4001BA9B6 /* EntryCollectionViewCell.swift in Sources */,
