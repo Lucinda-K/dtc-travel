@@ -27,7 +27,6 @@
 		6A3ADC5C1F4284D8007AD62F /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3ADC5B1F4284D8007AD62F /* Entry.swift */; };
 		6A3ADC5F1F4293E1007AD62F /* ImageAudioEntryDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A3ADC5E1F4293E1007AD62F /* ImageAudioEntryDetail.storyboard */; };
 		6A3ADC611F429B17007AD62F /* ImageAudioEntryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3ADC601F429B17007AD62F /* ImageAudioEntryDetailViewController.swift */; };
-		6A3ADC651F42A16A007AD62F /* microphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A3ADC641F42A16A007AD62F /* microphone.png */; };
 		6A3ADC671F42A1D5007AD62F /* speaker.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A3ADC661F42A1D5007AD62F /* speaker.png */; };
 		6A3ADC691F42A693007AD62F /* buildings1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6A3ADC681F42A693007AD62F /* buildings1.jpg */; };
 		6A3ADC711F42AC9C007AD62F /* progress_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A3ADC701F42AC9C007AD62F /* progress_bar.png */; };
@@ -40,6 +39,8 @@
 		8B2DEDA91F43D6270084E5E0 /* NewTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2DEDA81F43D6270084E5E0 /* NewTripViewController.swift */; };
 		8B2DEDAB1F43D9470084E5E0 /* CategoryTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2DEDAA1F43D9470084E5E0 /* CategoryTableTableViewController.swift */; };
 		8B2DEDAD1F43D9E70084E5E0 /* CategoryCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2DEDAC1F43D9E70084E5E0 /* CategoryCellTableViewCell.swift */; };
+		8B2DEDAF1F43E71B0084E5E0 /* CreateNewTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2DEDAE1F43E71B0084E5E0 /* CreateNewTripViewController.swift */; };
+		8B2DEDB11F43EC290084E5E0 /* AddCategoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2DEDB01F43EC290084E5E0 /* AddCategoriesTableViewController.swift */; };
 		8BA38EF81F282FB9004186BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA38EF71F282FB9004186BA /* AppDelegate.swift */; };
 		8BA38EFA1F282FB9004186BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA38EF91F282FB9004186BA /* ViewController.swift */; };
 		8BA38EFD1F282FB9004186BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BA38EFB1F282FB9004186BA /* Main.storyboard */; };
@@ -101,6 +102,8 @@
 		8B2DEDA81F43D6270084E5E0 /* NewTripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewTripViewController.swift; sourceTree = "<group>"; };
 		8B2DEDAA1F43D9470084E5E0 /* CategoryTableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableTableViewController.swift; sourceTree = "<group>"; };
 		8B2DEDAC1F43D9E70084E5E0 /* CategoryCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCellTableViewCell.swift; sourceTree = "<group>"; };
+		8B2DEDAE1F43E71B0084E5E0 /* CreateNewTripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewTripViewController.swift; sourceTree = "<group>"; };
+		8B2DEDB01F43EC290084E5E0 /* AddCategoriesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCategoriesTableViewController.swift; sourceTree = "<group>"; };
 		8BA38EF41F282FB9004186BA /* dtc-travel-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "dtc-travel-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BA38EF71F282FB9004186BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8BA38EF91F282FB9004186BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -207,25 +210,6 @@
 			name = "Text Entry";
 			sourceTree = "<group>";
 		};
-		8B2DEDA01F42776B0084E5E0 /* My Trips */ = {
-			isa = PBXGroup;
-			children = (
-				8B2DEDA11F4277810084E5E0 /* MyTripsViewController.swift */,
-				8B2DEDA51F4283560084E5E0 /* TripPhotoCell.swift */,
-			);
-			name = "My Trips";
-			sourceTree = "<group>";
-		};
-		8B2DEDA71F43D5910084E5E0 /* New Trip */ = {
-			isa = PBXGroup;
-			children = (
-				8B2DEDA81F43D6270084E5E0 /* NewTripViewController.swift */,
-				8B2DEDAA1F43D9470084E5E0 /* CategoryTableTableViewController.swift */,
-				8B2DEDAC1F43D9E70084E5E0 /* CategoryCellTableViewCell.swift */,
-			);
-			name = "New Trip";
-			sourceTree = "<group>";
-		};
 		6A3ADC561F428385007AD62F /* Text Entry Detail */ = {
 			isa = PBXGroup;
 			children = (
@@ -243,6 +227,27 @@
 				6A3ADC601F429B17007AD62F /* ImageAudioEntryDetailViewController.swift */,
 			);
 			name = "Image and Audio Entry Detail";
+			sourceTree = "<group>";
+		};
+		8B2DEDA01F42776B0084E5E0 /* My Trips */ = {
+			isa = PBXGroup;
+			children = (
+				8B2DEDA11F4277810084E5E0 /* MyTripsViewController.swift */,
+				8B2DEDA51F4283560084E5E0 /* TripPhotoCell.swift */,
+			);
+			name = "My Trips";
+			sourceTree = "<group>";
+		};
+		8B2DEDA71F43D5910084E5E0 /* New Trip */ = {
+			isa = PBXGroup;
+			children = (
+				8B2DEDA81F43D6270084E5E0 /* NewTripViewController.swift */,
+				8B2DEDAA1F43D9470084E5E0 /* CategoryTableTableViewController.swift */,
+				8B2DEDAC1F43D9E70084E5E0 /* CategoryCellTableViewCell.swift */,
+				8B2DEDAE1F43E71B0084E5E0 /* CreateNewTripViewController.swift */,
+				8B2DEDB01F43EC290084E5E0 /* AddCategoriesTableViewController.swift */,
+			);
+			name = "New Trip";
 			sourceTree = "<group>";
 		};
 		8BA38EEB1F282FB8004186BA = {
@@ -461,11 +466,13 @@
 				6AA4755E1F2EA36300F3B5CF /* CategoryTableViewCell.swift in Sources */,
 				6A3ADC5A1F428451007AD62F /* TextEntryDetailViewController.swift in Sources */,
 				8BA38EFA1F282FB9004186BA /* ViewController.swift in Sources */,
+				8B2DEDB11F43EC290084E5E0 /* AddCategoriesTableViewController.swift in Sources */,
 				8BA38EF81F282FB9004186BA /* AppDelegate.swift in Sources */,
 				6A3ADC5C1F4284D8007AD62F /* Entry.swift in Sources */,
 				6AA4755A1F2E9EE700F3B5CF /* TripBoardViewController.swift in Sources */,
 				6A28966B1F393AFF00E79A52 /* RecordAudioViewController.swift in Sources */,
 				8B2DEDAD1F43D9E70084E5E0 /* CategoryCellTableViewCell.swift in Sources */,
+				8B2DEDAF1F43E71B0084E5E0 /* CreateNewTripViewController.swift in Sources */,
 				6A3ADC611F429B17007AD62F /* ImageAudioEntryDetailViewController.swift in Sources */,
 				6A2896741F39443700E79A52 /* TextEntryViewController.swift in Sources */,
 				6A193E121F3001D4001BA9B6 /* EntryCollectionViewCell.swift in Sources */,
