@@ -13,6 +13,8 @@ class MyTripsViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    @IBOutlet weak var addTripButton: UIButton!
+    
     // MARK: - Properties
     fileprivate let itemsPerRow: CGFloat = 2
     
