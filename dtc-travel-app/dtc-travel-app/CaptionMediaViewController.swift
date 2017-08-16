@@ -14,6 +14,11 @@ class CaptionMediaViewController: UIViewController, UIPickerViewDelegate, UIPick
     @IBOutlet weak var CapturedImageView: UIImageView!
     @IBOutlet weak var DescriptionTextView: UITextView!
     
+    
+    @IBAction func skipTapped(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     var capturedImage: UIImage!
     var categories: [String] = [String]()
     
