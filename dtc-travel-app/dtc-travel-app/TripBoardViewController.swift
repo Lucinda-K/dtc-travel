@@ -22,11 +22,10 @@ class TripBoardViewController: UIViewController, UIPopoverPresentationController
     
     // Class attributes
     final fileprivate let reuseId = "categoryCell"
-    var foodEntries:[Entry] = []
-    var peopleEntries:[Entry] = []
-    var buildingEntries:[Entry] = []
+    final fileprivate let foodImages = ["food1.jpg", "speaker.png", "writing3.png", "food2.jpg", "food3.jpeg"]
+    final fileprivate let peopleImages = ["speaker.png", "people1.jpg", "people2.png", "speaker.png", "writing1.png"]
+    final fileprivate let buildingImages = ["writing1.png", "speaker.png", "writing2.png"]
     private var entryPopover:EntryOptionsPopoverViewController?
-    private var textEntry:String = "Dignissim lorem at erat dignissim, vel auctor ex interdum. Nulla facilisi. Nulla a ipsum a lacus molestie consequat a ac ex. Cras auctor ex dapibus orci fermentum, in rutrum neque viverra. Mauris mattis nisl in tortor porta, at dignissim velit bibendum. Integer turpis sem, commodo eget quam non, ultrices cursus lacus. Proin fermentum enim in risus placerat, a elementum nunc commodo. Curabitur a aliquam elit, in tempus sem. Proin commodo eros eu arcu aliquam, in aliquam sapien convallis. Fusce elementum leo enim, eget mattis felis ornare quis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec elementum tellus non lacus convallis, et gravida tellus fringilla."
     
     var capturedImage: UIImage?
     
@@ -34,26 +33,8 @@ class TripBoardViewController: UIViewController, UIPopoverPresentationController
         super.viewDidLoad()
         self.tableView.register(UINib(nibName: "CategoryCell", bundle: nil), forCellReuseIdentifier: reuseId)
         // Do any additional setup after loading the view.
-        
-        // Populate foodEntries
-        foodEntries.append(Entry(type: "image", title: "food1", imageString: "food1.jpg", textEntry: nil, category: "Food"))
-        foodEntries.append(Entry(type: "audio", title: "food2", imageString: "speaker.png", textEntry: nil, category: "Food"))
-        foodEntries.append(Entry(type: "text", title: "food3", imageString: "writing3.png", textEntry: textEntry, category: "Food"))
-        foodEntries.append(Entry(type: "image", title: "food4", imageString: "food2.jpg", textEntry: "image", category: "Food"))
-        foodEntries.append(Entry(type: "image", title: "food5", imageString: "food3.jpeg", textEntry: "image", category: "Food"))
-        
-        // Populate peopleEntries
-        peopleEntries.append(Entry(type: "audio", title: "people1", imageString: "speaker.png", textEntry: nil, category: "People"))
-        peopleEntries.append(Entry(type: "image", title: "people2", imageString: "people1.jpg", textEntry: nil, category: "People"))
-        peopleEntries.append(Entry(type: "image", title: "people3", imageString: "people2.png", textEntry: nil, category: "People"))
-        peopleEntries.append(Entry(type: "text", title: "people5", imageString: "writing1.png", textEntry: textEntry, category: "People"))
-        
-        // Populate buildingEntries
-        buildingEntries.append(Entry(type: "text", title: "buildings1", imageString: "writing1.png", textEntry: textEntry, category: "Buildings"))
-        buildingEntries.append(Entry(type: "audio", title: "buildings2", imageString: "speaker.png", textEntry: nil, category: "Buildings"))
-        buildingEntries.append(Entry(type: "text", title: "buildings3", imageString: "writing2.png", textEntry: textEntry, category: "Buildings"))
-        buildingEntries.append(Entry(type: "image", title: "buildings4", imageString: "buildings1.jpg", textEntry: nil, category: "Buildings"))
     }
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -123,7 +104,6 @@ class TripBoardViewController: UIViewController, UIPopoverPresentationController
 }
 
 extension TripBoardViewController: UITableViewDataSource, UITableViewDelegate{
-    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 3
     }
@@ -134,11 +114,11 @@ extension TripBoardViewController: UITableViewDataSource, UITableViewDelegate{
         var numCells = CGFloat(0)
         switch indexPath.section {
         case 0:
-            numCells = CGFloat(self.foodEntries.count)
+            numCells = CGFloat(self.foodImages.count)
         case 1:
-            numCells = CGFloat(self.peopleEntries.count)
+            numCells = CGFloat(self.peopleImages.count)
         case 2:
-            numCells = CGFloat(self.buildingEntries.count)
+            numCells = CGFloat(self.buildingImages.count)
         default:
             break
         }
@@ -171,16 +151,16 @@ extension TripBoardViewController: UITableViewDataSource, UITableViewDelegate{
         
         switch indexPath.section {
         case 0:
-            cell.configure(entries: self.foodEntries, delegate: self)
+            cell.configure(images: self.foodImages)
         case 1:
-            cell.configure(entries: self.peopleEntries, delegate: self)
+            cell.configure(images: self.peopleImages)
         case 2:
-            cell.configure(entries: self.buildingEntries, delegate: self)
+            cell.configure(images: self.buildingImages)
         default:
             break
         }
         return cell
-    }
+    } 
 }
 
 extension TripBoardViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -229,24 +209,5 @@ extension TripBoardViewController {
         let controller = storyboard.instantiateViewController(withIdentifier: "textEntry")
         self.dismiss(animated: true, completion: nil)
         self.present(controller, animated: true, completion: nil)
-    }
-}
-
-// Entry Detail
-extension TripBoardViewController {
-    func presentTextEntry (entry:Entry) {
-        let storyboard = UIStoryboard(name: "TextEntryDetail", bundle: nil)
-        if let controller = storyboard.instantiateViewController(withIdentifier: "textEntryDetail") as? TextEntryDetailViewController {
-            self.present(controller, animated: true, completion: nil)
-            controller.configure(entryModel: entry)
-        }
-    }
-    
-    func presentImageEntry (entry:Entry) {
-        let storyboard = UIStoryboard(name: "ImageAudioEntryDetail", bundle: nil)
-        if let controller = storyboard.instantiateViewController(withIdentifier: "imageAudioEntryDetail") as? ImageAudioEntryDetailViewController {
-            self.present(controller, animated: true, completion: nil)
-            controller.configure(entry: entry)
-        }
     }
 }

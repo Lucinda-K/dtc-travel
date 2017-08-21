@@ -19,7 +19,6 @@ class TextEntryViewController: UIViewController, UITextViewDelegate, UITextField
     }
     
     final private let categories = ["Food", "People", "Buildings"]
-    private let prompt = "Prompt: Describe what you can hear in this moment."
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,9 +26,6 @@ class TextEntryViewController: UIViewController, UITextViewDelegate, UITextField
         self.titleInputField.delegate = self
         self.categoryPickerView.dataSource = self
         self.categoryPickerView.delegate = self
-        
-        textEntryField.text = prompt
-        textEntryField.textColor = UIColor.lightGray
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
@@ -46,20 +42,6 @@ class TextEntryViewController: UIViewController, UITextViewDelegate, UITextField
             return false
         }
         return true
-    }
-    
-    func textViewDidBeginEditing(_ textView: UITextView) {
-        if textView.textColor == UIColor.lightGray {
-            textView.text = nil
-            textView.textColor = UIColor.black
-        }
-    }
-    
-    func textViewDidEndEditing(_ textView: UITextView) {
-        if textView.text.isEmpty {
-            textView.text = prompt
-            textView.textColor = UIColor.lightGray
-        }
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
